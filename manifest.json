@@ -1,19 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "XMUFD Inline",
-  "version": "2.0.0",
-  "description": "在网页内直接显示下载按钮，无需弹窗",
+  "name": "TronClass 下载增强",
+  "version": "1.0.0",
+  "description": "TronClass 文件下载增强，支持批量下载、仅预览文件下载。",
   "permissions": [
     "downloads",
-    "storage"
+    "activeTab",
+    "tabs"
   ],
   "host_permissions": [
-    "https://lnt.xmu.edu.cn/*"
+    "*://*/course/*/learning-activity*"
   ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -27,11 +29,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://lnt.xmu.edu.cn/*"],
+      "matches": ["*://*/course/*/learning-activity*"],
       "js": ["content.js"],
-      "css": ["styles.css"],
-      "run_at": "document_start",
-      "all_frames": true
+      "run_at": "document_start"
     }
   ]
 }

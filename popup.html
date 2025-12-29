@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TronClass 下载增强</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <strong>TronClass 下载增强</strong>
+      <div class="tabs">
+        <i id="github" class="fab fa-github icon-btn" title="GitHub"></i>
+        <i id="about" class="fas fa-info-circle icon-btn" title="关于"></i>
+      </div>
+    </header>
+
+    <section id="view-downloads" class="view active">
+      <div id="dl-status" class="status">Loading...</div>
+      <div id="dl-list"></div>
+      <div id="empty-state" class="empty-state" style="display:none;">
+        <p id="empty-message">未检测到可下载的文件</p>
+        <p class="hint">请访问课程页面查看课程内容<br> 或<a id="refresh-link" class="hint-link" href="#">刷新</a>后重试</p>
+        <p class="hint">查看<a id="tutorial-link" class="hint-link" href="#">使用教程</a></p>
+      </div>
+    </section>
+
+    <div class="footer" id="footer">
+      <button id="dl-all" class="btn btn-primary" style="display:none;">下载全部</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
