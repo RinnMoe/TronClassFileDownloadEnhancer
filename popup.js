@@ -117,7 +117,7 @@
 
   tutorialLink.addEventListener('click', (e)=>{
     e.preventDefault();
-    chrome.tabs.create({ url: 'https://toys.rinn.moe/tcde/tutorial' });
+    chrome.tabs.create({ url: 'https://toys.rinn.moe/tcde/tutorial.html' });
   });
 
   refreshLink.addEventListener('click', async (e)=>{
